@@ -29,6 +29,8 @@ app.get_graph().draw_mermaid_png(output_file_path="graph.png")
 if __name__ == "__main__":
     print("Hello React with LangGraph")
     res = app.invoke(
-        input={"input": "What is the weather in SF? Write it and then triple it"}
+        input={
+            "input": "What is the weather in SF? Write it and then triple it, I need both the original and the tripled value."
+        }
     )
     print(res["agent_outcome"].return_values["output"])
