@@ -1,9 +1,9 @@
 from dotenv import load_dotenv, find_dotenv
 from langchain import hub
+from langchain.agents import create_react_agent
 from langchain.prompts import PromptTemplate
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_openai import ChatOpenAI
-from langgraph.prebuilt import create_react_agent
 from langchain_core.tools import tool
 
 _ = load_dotenv(find_dotenv())
